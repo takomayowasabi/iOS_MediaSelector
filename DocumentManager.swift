@@ -21,21 +21,6 @@ class DocumentManager: NSObject {
     //부모 뷰 설정.
     private var parentController: UIViewController?
     
-    /// - 매개 변수:
-    ///     - parentController
-    ///             파일 저장소 띄우기전 뷰 지정해요.
-    ///
-    ///     - isFileSelected
-    ///             파일이 지정되었는지 확인.
-    ///
-    ///     - fileName
-    ///             클라우드에 지정된 파일 이름.
-    ///
-    ///     - fileExtension
-    ///             파일의 확장명.
-    ///     - filePath
-    ///             캐시로 임의 저장된 파일의 경로.
-    
     func showDocumentMenuController(_ parentController:  UIViewController, complitionhandler:@escaping (_ isFileSelected: Bool, _ fileName: String, _ fileExtension: String, _ filePath: String) -> Void) {
         self.documnetFetchCompletionHandler = complitionhandler
         self.parentController = parentController
